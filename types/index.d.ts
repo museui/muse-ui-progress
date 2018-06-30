@@ -15,3 +15,10 @@ export default interface Progress {
   start(): void;
   done(): void;
 }
+
+declare module 'vue/types/vue' {
+  interface Vue {
+    $progress: Progress
+  }
+}
+
